@@ -3,6 +3,12 @@
     <PropertyGroup>
         <TargetFramework>net5.0</TargetFramework>
         <RootNamespace>TankerApi</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Tanker.Net</Title>
+        <Authors>Fynn Schapdick</Authors>
+        <Description>A C# Wrapper for Tankerkönig-Api</Description>
+        <PackageProjectUrl>https://github.com/FynnSchapdick/TankerApi</PackageProjectUrl>
+        <PackageTags>Tankerkönig, Gasoline, MIT</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
