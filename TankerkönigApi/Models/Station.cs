@@ -1,9 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace TankerApi.Models
 {
     public class Station
     {
+        [JsonProperty("country")]
+        public string Country { get; set; }
+        
         [JsonProperty("id")]
         public string Id { get; set; }
 
@@ -16,44 +21,31 @@ namespace TankerApi.Models
         [JsonProperty("street")]
         public string Street { get; set; }
         
+        [JsonProperty("postalCode")]
+        public int PostalCode { get; set; }
+        
         [JsonProperty("place")]
         public string Place { get; set; }
         
-        [JsonProperty("lat")]
-        public double Lat { get; set; }
-        
-        [JsonProperty("lng")]
-        public double Lng { get; set; }
-        
-        [JsonProperty("dist")]
-        public float Dist { get; set; }
-        
-        [JsonProperty("price")]
-        public float? Price { get; set; }
+        [JsonProperty("coords")]
+        public Coordinates Coordinates { get; set; }
         
         [JsonProperty("isOpen")]
         public bool IsOpen { get; set; }
-        
-        [JsonProperty("houseNumber")]
-        public string HouseNumber { get; set; }
-        
-        [JsonProperty("postCode")]
-        public int PostCode { get; set; }
 
-        public override string ToString()
-        {
-            return $"{nameof(Id)} : {Id}\n" +
-                   $"{nameof(Name)} : {Name}\n" +
-                   $"{nameof(Brand)} : {Brand}\n" +
-                   $"{nameof(Street)} : {Street}\n" +
-                   $"{nameof(Place)} : {Place}\n" +
-                   $"{nameof(Lat)} : {Lat}\n" +
-                   $"{nameof(Lng)} : {Lng}\n" +
-                   $"{nameof(Dist)} : {Dist}\n" +
-                   $"{nameof(Price)} : {Price ?? 0.00}\n" +
-                   $"{nameof(IsOpen)} : {IsOpen}\n" +
-                   $"{nameof(HouseNumber)} : {HouseNumber}\n" +
-                   $"{nameof(PostCode)} : {PostCode}\n";
-        }
+        [JsonProperty("closesAt")]
+        public DateTime ClosesAt { get; set; }
+        
+        [JsonProperty("opensAt")]
+        public DateTime OpensAt { get; set; }
+
+        [JsonProperty("openingTimes")]
+        public List<OpeningTime> OpeningTimes { get; set; }
+
+        [JsonProperty("dist")]
+        public float Dist { get; set; }
+        
+        [JsonProperty("fuels")]
+        public List<Fuel> Fuels { get; set; }
     }
 }

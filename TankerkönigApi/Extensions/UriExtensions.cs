@@ -8,15 +8,6 @@ namespace TankerApi.Extensions
 {
     public static class UriExtensions
     {
-        public static Uri AddApiKey(this Uri url, string paramName, string paramValue)
-        {
-            var uriBuilder = new UriBuilder(url);
-            var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query[paramName] = GetUtf8String(paramValue);
-            uriBuilder.Query = query.ToString();
-            return uriBuilder.Uri;
-        }
-        
         public static Uri AddEndpointWithParameters(this Uri baseUrl, string endpointUrl ,List<KeyValuePair<string, object>> parameters)
         {
             Uri uri = new Uri(baseUrl, endpointUrl);
