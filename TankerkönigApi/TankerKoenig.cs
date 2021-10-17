@@ -39,13 +39,11 @@ namespace TankerApi
             
             string content = await result.Content.ReadAsStringAsync(cancellationToken);
 
-            dynamic? response = result.StatusCode == HttpStatusCode.OK
+            return result.StatusCode == HttpStatusCode.OK
                 ? JsonConvert.DeserializeObject<TResponse>(content,
                 new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore, Converters = new List<JsonConverter> { new IsoDateTimeConverter()}})
                 : JsonConvert.DeserializeObject<FailureResponse>(content,
                     new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore, Converters = new List<JsonConverter> { new IsoDateTimeConverter()}});
-
-            return response;
         }
     }
 }
