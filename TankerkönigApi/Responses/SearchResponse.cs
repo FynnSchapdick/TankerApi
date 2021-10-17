@@ -15,5 +15,11 @@ namespace TankerApi.Responses
         
         [JsonProperty("stations")]
         public IList<Station> Stations { get; set; }
+        
+        [JsonProperty("statusCode")]
+        public int Code { get; set; }
+        
+        [JsonProperty("message")]
+        public string Message { get; set; }
     }
 }

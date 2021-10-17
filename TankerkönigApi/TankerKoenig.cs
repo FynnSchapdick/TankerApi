@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net;
 using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,7 +7,6 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using TankerApi.Extensions;
 using TankerApi.Interfaces;
-using TankerApi.Responses;
 
 namespace TankerApi
 {
@@ -27,7 +25,7 @@ namespace TankerApi
             _baseUri = new Uri(_baseUrl);
         }
 
-        public async Task<dynamic> SendAsync<TResponse>(IRequest<TResponse> request, CancellationToken cancellationToken = default)
+        public async Task<TResponse> SendAsync<TResponse>(IRequest<TResponse> request, CancellationToken cancellationToken = default)
         {
             request.ApiKey = _apiKey;
             
@@ -39,11 +37,12 @@ namespace TankerApi
             
             string content = await result.Content.ReadAsStringAsync(cancellationToken);
 
-            return result.StatusCode == HttpStatusCode.OK
-                ? JsonConvert.DeserializeObject<TResponse>(content,
-                new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore, Converters = new List<JsonConverter> { new IsoDateTimeConverter()}})
-                : JsonConvert.DeserializeObject<FailureResponse>(content,
-                    new JsonSerializerSettings {NullValueHandling = NullValueHandling.Ignore, Converters = new List<JsonConverter> { new IsoDateTimeConverter()}});
+            return JsonConvert.DeserializeObject<TResponse>(content,
+                new JsonSerializerSettings
+                {
+                    NullValueHandling = NullValueHandling.Ignore,
+                    Converters = new List<JsonConverter> {new IsoDateTimeConverter()}
+                });
         }
     }
 }
