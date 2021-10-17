@@ -12,7 +12,6 @@ namespace TankerApi
 {
     public class TankerKoenig
     {
-
         private const string _baseUrl = "https://creativecommons.tankerkoenig.de/api/v4/";
         private readonly string _apiKey;
         private readonly HttpClient _client;
