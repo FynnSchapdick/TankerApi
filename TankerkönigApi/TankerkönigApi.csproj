@@ -4,10 +4,13 @@
         <TargetFramework>net5.0</TargetFramework>
         <RootNamespace>TankerApi</RootNamespace>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Title>Tanker.Net</Title>
+        <PackageId>Tankerkoenig.Net</PackageId>
+        <Title>Tankerkoenig.Net</Title>
+        <Version>1.0.0</Version>
         <Authors>Fynn Schapdick</Authors>
-        <Description>A C# Wrapper for Tankerkönig-Api</Description>
+        <PackageDescription>A C# Wrapper for Tankerkönig-Api</PackageDescription>
         <PackageProjectUrl>https://github.com/FynnSchapdick/TankerApi</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/FynnSchapdick/TankerApi</RepositoryUrl>
         <PackageTags>Tankerkönig, Gasoline, MIT</PackageTags>
         <PackageVersion>1.1.0</PackageVersion>
     </PropertyGroup>
