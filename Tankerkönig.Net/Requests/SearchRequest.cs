@@ -8,9 +8,6 @@ namespace TankerApi.Requests
     public class SearchRequest : IRequest<SearchResponse>
     {
         private readonly List<string> _ids;
-        private readonly double _latitude;
-        private readonly double _longitude;
-        private readonly int _radius;
         private List<KeyValuePair<string, object>> _parameters = new List<KeyValuePair<string, object>>();
 
         public string ApiKey
@@ -24,21 +21,24 @@ namespace TankerApi.Requests
 
         public SearchRequest(double latitude, double longitude, int radius = 0)
         {
-            _latitude = latitude;
-            _longitude = longitude;
-            _radius = radius > 25 ? 25 : radius;
             EndpointUrl = "stations/search";
             _parameters.Add(new KeyValuePair<string, object>("lat", latitude));
             _parameters.Add(new KeyValuePair<string, object>("lng", longitude));
-            _parameters.Add(new KeyValuePair<string, object>("rad", radius));
+            _parameters.Add(new KeyValuePair<string, object>("rad", radius > 25 ? 25 : radius));
         }
 
-        public SearchRequest(List<string> ids, float latitude, float longitude)
+        public SearchRequest(List<string> ids, double? latitude = null, double? longitude = null)
         {
             _ids = ids;
-            _latitude = latitude;
-            _longitude = longitude;
             EndpointUrl = "stations/ids";
+            _parameters.Add(new KeyValuePair<string, object>("ids", ids));
+            
+            if (latitude.HasValue
+                && longitude.HasValue)
+            {
+                _parameters.Add(new KeyValuePair<string, object>("lat", latitude.Value));
+                _parameters.Add(new KeyValuePair<string, object>("lng", longitude.Value));
+            }
         }
 
         public SearchRequest(string postalCode)

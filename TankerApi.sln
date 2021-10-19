@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{D0C331A8-47C7-4298-B0BA-F932D95BE551}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TankerkönigApi", "TankerkönigApi\TankerkönigApi.csproj", "{F9CD616A-DC5A-4DC8-BA20-FF020E5F662E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tankerkönig.Net", "Tankerkönig.Net\Tankerkönig.Net.csproj", "{F9CD616A-DC5A-4DC8-BA20-FF020E5F662E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{D34B8160-071D-4C40-AF88-14661C6F7F2B}"
 EndProject

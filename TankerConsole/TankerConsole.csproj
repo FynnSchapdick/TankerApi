@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TankerkönigApi\TankerkönigApi.csproj" />
+      <ProjectReference Include="..\Tankerkönig.Net\Tankerkönig.Net.csproj" />
     </ItemGroup>
 
 </Project>

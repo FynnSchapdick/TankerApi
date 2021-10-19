@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO.IsolatedStorage;
+using System.Linq;
 using System.Text;
 using System.Web;
 
@@ -19,22 +21,32 @@ namespace TankerApi.Extensions
                 query[parameter.Key] = GetUtf8String(parameter.Value);
             }
 
-            uriBuilder.Query = query.ToString();
+            uriBuilder.Query = query.ToString() ?? string.Empty;
 
             return uriBuilder.Uri;
         }
         
         private static string GetUtf8String(object value)
         {
-            string result = "";
+            string result = string.Empty;
 
-            if (value is double floatValue)
+            switch (value)
             {
-                result = floatValue.ToString(CultureInfo.InvariantCulture);
-            }
-            else if (value is string stringValue)
-            {
-                result = stringValue;
+                case double doubleValue:
+                    result = doubleValue.ToString(CultureInfo.InvariantCulture);
+                    break;
+                
+                case int intValue:
+                    result = intValue.ToString(CultureInfo.InvariantCulture);
+                    break;
+                
+                case List<string> idsValue:
+                    result = string.Join(",", idsValue).ToString(CultureInfo.InvariantCulture);
+                    break;
+                
+                case string stringValue:
+                    result = stringValue;
+                    break;
             }
             
             byte[] bytes = Encoding.Default.GetBytes(result);
