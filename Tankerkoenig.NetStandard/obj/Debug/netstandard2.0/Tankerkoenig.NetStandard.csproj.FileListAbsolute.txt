@@ -1,6 +1,0 @@
-D:\Repositories\TankerApi\Tankerkoenig.NetStandard\obj\Debug\netstandard2.0\Tankerkoenig.NetStandard.GlobalUsings.g.cs
-D:\Repositories\TankerApi\Tankerkoenig.NetStandard\obj\Debug\netstandard2.0\Tankerkoenig.NetStandard.csproj.AssemblyReference.cache
-D:\Repositories\TankerApi\Tankerkoenig.NetStandard\obj\Debug\netstandard2.0\Tankerkoenig.NetStandard.GeneratedMSBuildEditorConfig.editorconfig
-D:\Repositories\TankerApi\Tankerkoenig.NetStandard\obj\Debug\netstandard2.0\Tankerkoenig.NetStandard.AssemblyInfoInputs.cache
-D:\Repositories\TankerApi\Tankerkoenig.NetStandard\obj\Debug\netstandard2.0\Tankerkoenig.NetStandard.AssemblyInfo.cs
-D:\Repositories\TankerApi\Tankerkoenig.NetStandard\obj\Debug\netstandard2.0\Tankerkoenig.NetStandard.csproj.CoreCompileInputs.cache
