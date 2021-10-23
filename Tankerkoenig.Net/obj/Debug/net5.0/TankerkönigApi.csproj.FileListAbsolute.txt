@@ -1,0 +1,12 @@
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.csproj.AssemblyReference.cache
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.AssemblyInfoInputs.cache
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.AssemblyInfo.cs
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.csproj.CoreCompileInputs.cache
+D:\Repositories\TankerApi\TankerkönigApi\bin\Debug\net5.0\TankerkönigApi.deps.json
+D:\Repositories\TankerApi\TankerkönigApi\bin\Debug\net5.0\TankerkönigApi.dll
+D:\Repositories\TankerApi\TankerkönigApi\bin\Debug\net5.0\ref\TankerkönigApi.dll
+D:\Repositories\TankerApi\TankerkönigApi\bin\Debug\net5.0\TankerkönigApi.pdb
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.dll
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\ref\TankerkönigApi.dll
+D:\Repositories\TankerApi\TankerkönigApi\obj\Debug\net5.0\TankerkönigApi.pdb

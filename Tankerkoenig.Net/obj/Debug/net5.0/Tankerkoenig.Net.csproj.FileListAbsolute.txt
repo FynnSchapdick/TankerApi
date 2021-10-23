@@ -1,0 +1,12 @@
+D:\Repositories\TankerApi\Tankerkoenig.Net\bin\Debug\net5.0\Tankerkoenig.Net.deps.json
+D:\Repositories\TankerApi\Tankerkoenig.Net\bin\Debug\net5.0\Tankerkoenig.Net.dll
+D:\Repositories\TankerApi\Tankerkoenig.Net\bin\Debug\net5.0\ref\Tankerkoenig.Net.dll
+D:\Repositories\TankerApi\Tankerkoenig.Net\bin\Debug\net5.0\Tankerkoenig.Net.pdb
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.csproj.AssemblyReference.cache
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.GeneratedMSBuildEditorConfig.editorconfig
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.AssemblyInfoInputs.cache
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.AssemblyInfo.cs
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.csproj.CoreCompileInputs.cache
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.dll
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\ref\Tankerkoenig.Net.dll
+D:\Repositories\TankerApi\Tankerkoenig.Net\obj\Debug\net5.0\Tankerkoenig.Net.pdb
