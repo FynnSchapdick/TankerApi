@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Net.Http;
 using System.Threading.Tasks;
 using Tankerkoenig.Net;
 using Tankerkoenig.Net.Requests;
@@ -12,7 +13,7 @@ namespace TankerConsole
         {
             string apiKey = "cffa4fb8-7a16-cd85-7946-263722530f15"; // default api-key from swagger
 
-            TankerKoenig tanker = new TankerKoenig(apiKey);
+            TankerKoenig tanker = new TankerKoenig(apiKey, new HttpClient());
 
             SearchRequest lngLatRadRequest = new SearchRequest(54.10707,10.8145, 25);
             SearchResponse lngLatRadResponse = await tanker.GetStationsAsync(lngLatRadRequest);

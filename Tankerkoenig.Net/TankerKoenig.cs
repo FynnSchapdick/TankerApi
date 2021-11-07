@@ -12,16 +12,15 @@ namespace Tankerkoenig.Net
 {
     public class TankerKoenig
     {
-        private const string _baseUrl = "https://creativecommons.tankerkoenig.de/api/v4/";
         private readonly string _apiKey;
         private readonly HttpClient _client;
         private readonly Uri _baseUri;
 
-        public TankerKoenig(string apiKey)
+        public TankerKoenig(string apiKey, HttpClient httpClient)
         {
             _apiKey = apiKey;
-            _client = new HttpClient();
-            _baseUri = new Uri(_baseUrl);
+            _baseUri = new Uri("https://creativecommons.tankerkoenig.de/api/v4/");
+            _client = httpClient;
         }
 
         public async Task<TResponse> GetStationsAsync<TResponse>(IRequest<TResponse> request)
